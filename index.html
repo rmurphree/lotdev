@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calara Group | Premium Residential Lots for Builders in Houston</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  50: '#f0fdf4',
+                  100: '#dcfce7',
+                  200: '#bbf7d0',
+                  300: '#86efac',
+                  400: '#4ade80',
+                  500: '#22c55e',
+                  600: '#16a34a',
+                  700: '#15803d',
+                  800: '#166534',
+                  900: '#14532d',
+                }
+              }
+            }
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(20, 83, 45, 0.9) 0%, rgba(22, 101, 52, 0.9) 100%);
+        }
+        
+        .lot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .map-container {
+            height: 400px;
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: calc(100% - 24px);
+            width: 2px;
+            background: #166534;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #166534;
+            box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-home text-primary-700 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">Calara Group</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#about" class="text-gray-900 hover:text-primary-700 px-3 py-2 font-medium">About</a>
+                    <a href="#project" class="text-gray-900 hover:text-primary-700 px-3 py-2 font-medium">The Project</a>
+                    <a href="#lots" class="text-gray-900 hover:text-primary-700 px-3 py-2 font-medium">Available Lots</a>
+                    <a href="#timeline" class="text-gray-900 hover:text-primary-700 px-3 py-2 font-medium">Timeline</a>
+                    <a href="#contact" class="bg-primary-700 text-white px-4 py-2 rounded-md font-medium hover:bg-primary-800 transition duration-300">Contact Us</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-primary-700">About</a>
+                <a href="#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-primary-700">The Project</a>
+                <a href="#lots" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-primary-700">Available Lots</a>
+                <a href="#timeline" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-primary-700">Timeline</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-primary-700 text-white hover:bg-primary-800">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="hero-gradient">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Premium Residential Lots in Houston</h1>
+                    <p class="text-xl md:text-2xl text-primary-100 mb-8 max-w-3xl mx-auto">Exclusive opportunity for homebuilders in Houston's fastest-growing neighborhood</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#lots" class="bg-white text-primary-700 px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition duration-300">View Available Lots</a>
+                        <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-bold hover:bg-white hover:text-primary-700 transition duration-300">Builder Inquiry</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Trusted Land Developers in Houston</h2>
+                    <p class="text-gray-600 mb-6">With over 20 years of experience in Houston's real estate market, Calara Group has established itself as a premier developer of residential communities. Our expertise in land acquisition, planning, and development ensures premium quality lots for discerning homebuilders.</p>
+                    <p class="text-gray-600 mb-8">Our new development, <span class="font-semibold text-primary-700">Pinecrest Estates</span>, offers an exceptional opportunity to build in one of Houston's most sought-after emerging neighborhoods.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-primary-700 text-xl mr-2"></i>
+                                <span class="font-semibold">20+ Years</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Experience</p>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-home text-primary-700 text-xl mr-2"></i>
+                                <span class="font-semibold">500+ Lots</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Developed</p>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marked-alt text-primary-700 text-xl mr-2"></i>
+                                <span class="font-semibold">Prime</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Locations</p>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-handshake text-primary-700 text-xl mr-2"></i>
+                                <span class="font-semibold">50+ Builders</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Partnerships</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" alt="Houston residential area" class="w-full h-auto rounded-lg shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-primary-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-award text-primary-700 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">2023 Best Development</p>
+                                <p class="text-sm text-gray-600">Houston Builders Association</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Highlights -->
+    <section id="project" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Pinecrest Estates</h2>
+                <p class="text-xl text-primary-700 font-medium mb-4">Now Available for Builder Acquisition</p>
+                <div class="w-24 h-1 bg-primary-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary-700 text-3xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Prime Location</h3>
+                    <p class="text-gray-600">Situated in Northwest Houston with easy access to major highways, top-rated schools, and growing commercial centers.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary-700 text-3xl mb-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Quality</h3>
+                    <p class="text-gray-600">Engineered lots with proper drainage, utilities in place, and carefully planned for optimal home placement and street appeal.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary-700 text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Strong Demand</h3>
+                    <p class="text-gray-600">Area experiencing rapid growth with high demand for quality homes. Average days on market for completed homes is just 14 days.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Pinecrest Estates development" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Development Highlights</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-700 mt-1 mr-3"></i>
+                                <span class="text-gray-700">120 premium residential lots ranging from 6,000 to 10,000 sq.ft.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-700 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Underground utilities with fiber optic internet availability</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-700 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Community park and walking trails included in development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-700 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Builder-friendly HOA with reasonable restrictions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-700 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Zoned to highly-rated Cy-Fair ISD schools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-700 mt-1 mr-3"></i>
+                                <span class="text-gray-700">15 minutes to The Woodlands and major employment centers</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#contact" class="inline-block bg-primary-700 text-white px-6 py-3 rounded-md font-bold hover:bg-primary-800 transition duration-300">Request Development Package</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Lots -->
+    <section id="lots" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Available Lots</h2>
+                <p class="text-xl text-gray-600">Select from our premium inventory of residential lots</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="lot-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Corner lot" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-primary-700 text-white px-3 py-1 rounded-full text-sm font-bold">Corner Lot</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Section 1, Lot 12</h3>
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Pinecrest Drive</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Lot Size</p>
+                                <p class="font-semibold">8,750 sq.ft.</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Price</p>
+                                <p class="font-semibold text-primary-700">$95,000</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="block text-center bg-gray-100 text-primary-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition duration-300">Inquire About This Lot</a>
+                    </div>
+                </div>
+                
+                <div class="lot-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cul-de-sac lot" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">Cul-de-sac</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Section 2, Lot 45</h3>
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Pinehurst Circle</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Lot Size</p>
+                                <p class="font-semibold">10,200 sq.ft.</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Price</p>
+                                <p class="font-semibold text-primary-700">$115,000</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="block text-center bg-gray-100 text-primary-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition duration-300">Inquire About This Lot</a>
+                    </div>
+                </div>
+                
+                <div class="lot-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Park view lot" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold">Park View</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Section 3, Lot 78</h3>
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Pineview Lane</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Lot Size</p>
+                                <p class="font-semibold">9,500 sq.ft.</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Price</p>
+                                <p class="font-semibold text-primary-700">$105,000</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="block text-center bg-gray-100 text-primary-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition duration-300">Inquire About This Lot</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#contact" class="inline-block bg-primary-700 text-white px-8 py-3 rounded-md font-bold hover:bg-primary-800 transition duration-300">View Full Inventory & Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-0 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="map-container" id="map">
+                <!-- Map placeholder - in a real implementation you would use Google Maps or similar API -->
+                <div class="w-full h-full bg-gray-300 flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <i class="fas fa-map-marked-alt text-4xl text-primary-700 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Pinecrest Estates Location</h3>
+                        <p class="text-gray-600 mb-4">Northwest Houston, TX</p>
+                        <p class="text-gray-500">Near major highways, schools, and employment centers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Development Timeline</h2>
+                <p class="text-xl text-gray-600">Key milestones for Pinecrest Estates</p>
+            </div>
+            
+            <div class="relative max-w-3xl mx-auto">
+                <div class="space-y-8">
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary-700 border-4 border-primary-100"></div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-gray-900">Phase 1 Infrastructure Complete</h3>
+                                <span class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded">Current</span>
+                            </div>
+                            <p class="text-gray-600">All underground utilities installed, roads paved, and initial landscaping complete for first 40 lots.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary-700 border-4 border-primary-100"></div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Builder Lot Acquisition</h3>
+                            <p class="text-gray-600">Now accepting reservations and purchases from approved builders. Limited time incentives available.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary-700 border-4 border-primary-100"></div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Phase 2 Infrastructure</h3>
+                            <p class="text-gray-600">Scheduled for Q1 2024. Includes remaining lots and community amenities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary-700 border-4 border-primary-100"></div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Model Home Construction</h3>
+                            <p class="text-gray-600">Builder model homes expected to begin construction Q2 2024.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary-700 border-4 border-primary-100"></div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Community Grand Opening</h3>
+                            <p class="text-gray-600">Planned for Fall 2024 with multiple model homes completed and first residents moving in.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Builder Testimonials</h2>
+                <p class="text-xl text-gray-600">What our builder partners say about working with us</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-primary-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Michael Thompson</h4>
+                            <p class="text-sm text-gray-600">Thompson Custom Homes</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"We've purchased lots in three of Calara Group's developments. Their attention to detail in preparing the lots saves us time and money during construction. The quality of their infrastructure is superior to many other developers we've worked with."</p>
+                    <div class="mt-4 flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-primary-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Johnson Luxury Builders</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The team at Calara Group understands builders' needs. Their lot layouts accommodate our preferred floor plans, and their permitting process is streamlined. We've been able to get homes to market faster with their lots compared to other developments."</p>
+                    <div class="mt-4 flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-primary-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">David Rodriguez</h4>
+                            <p class="text-sm text-gray-600">Rodriguez Family Builders</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"As a mid-sized builder, we appreciate that Calara Group works with builders of all sizes. They offer flexible purchasing options and their project timelines are reliable. The Pinecrest Estates location is perfect for our target market."</p>
+                    <div class="mt-4 flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Build in Pinecrest Estates?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join the select group of builders securing lots in this premier Houston development. Limited inventory remaining in Phase 1.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-primary-700 px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition duration-300">Contact Our Sales Team</a>
+                <a href="tel:+12815551234" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-bold hover:bg-white hover:text-primary-700 transition duration-300"><i class="fas fa-phone mr-2"></i> (281) 555-1234</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Our Sales Team</h2>
+                    <p class="text-gray-600 mb-8">Complete the form to request more information about available lots, pricing, or to schedule a site visit. Our team will respond within 24 hours.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary-100 p-3 rounded-full">
+                                    <i class="fas fa-envelope text-primary-700 text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email Us</h3>
+                                <p class="text-gray-600">sales@calaragroup.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary-100 p-3 rounded-full">
+                                    <i class="fas fa-phone text-primary-700 text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Call Us</h3>
+                                <p class="text-gray-600">(281) 555-1234</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary-100 p-3 rounded-full">
+                                    <i class="fas fa-map-marker-alt text-primary-700 text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Visit Our Office</h3>
+                                <p class="text-gray-600">1234 Development Way, Suite 200<br>Houston, TX 77079</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb
+</html>
